@@ -1,0 +1,31 @@
+<div class="row">
+  <h2>All Items</h2>
+</div>
+
+<table class="table table-striped table-bordered">
+  <thead>
+    <tr>
+        <th>title</th>
+      <th> initialprice</th>
+      <th> date_init </th>
+      <th> date_end</th>
+      <th> Category</th>
+      <th> Actions </th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let item of items">
+        <td>{{item.title}}</td>
+        <td> {{ item.initial_price }} </td>
+      <td> {{ item.date_init }} </td>
+      <td> {{ item.date_end }} </td>
+      <td> {{ item.category.cat_label}} </td>
+
+      <td>
+        <button (click)="updateItem(item.item_id)" class="btn btn-primary"> Update</button>
+        <button (click)="deleteItem(item.item_id)" class="btn btn-danger" style="margin-left: 10px"> Delete</button>
+        <button (click)="itemDetails(item.item_id)" class="btn btn-primary" style="margin-left: 10px"> View</button>
+      </td>
+    </tr>
+  </tbody>
+</table>

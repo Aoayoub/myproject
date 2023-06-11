@@ -1,0 +1,39 @@
+<div class="row">
+  <div class="card col-md-6 offset-md-3 offset-md-3">
+    <div class="row">
+      <h3 class="text-center"> Update Item </h3>
+      <hr />
+      <div class="card-body">
+        <form (ngSubmit)="onSubmit()">
+
+          <div class="form-group">
+            <label>initial price</label>
+            <input type="text" class="form-control" id="init_price" [(ngModel)]="item.initial_price"
+                   name="init_price">
+          </div>
+
+          <div class="form-group">
+            <label> date initial</label>
+            <input type="text" class="form-control" id="date_init" [(ngModel)]="item.date_init"
+                   name="date_init">
+          </div>
+
+          <div class="form-group">
+            <label> date final</label>
+            <input type="text" class="form-control" id="date_end" [(ngModel)]="item.date_end"
+                   name="date_end">
+          </div>
+          <div class="form-group">
+            <label> Category </label>
+            <input type="text" class="form-control" id="emailId" [(ngModel)]="item.category.category_id"
+                   name="emailId">
+          </div>
+
+          <br />
+          <button class="btn btn-success" type="submit">Submit</button>
+
+        </form>
+      </div>
+    </div>
+  </div>
+</div>
